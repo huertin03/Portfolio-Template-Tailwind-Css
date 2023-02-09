@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>My Portfolio</title>
+    <style>
+        /*#hidden-text {        //EL TAIWIND ES UNA MIERDA Y SU ATRIBUTO PARA ESTAS DOS LÍNEAS INCLUYE LA ELIPLSIS QUE HACE QUE QUEDE FEO EL EFECTO 
+            white-space: nowrap;
+            overflow: hidden;
+        }*/
+      
+        #navbar:hover {
+            width: 144px;
+           
+        }
+        #left-menu {
+            margin-top: 7rem;
+            transition: all 0.5s;
+        }
+
+        #navbar:hover #left-menu {
+            margin-top: 1rem;
+           
+        }
+        #navbar {
+            transition: width 0.5s;
+        }
+    </style>
+</head>
+
+<body class="bg-fixed bg-no-repeat bg-center bg-cover relative" style="background-image: url(src/fondo.jpg)">
+    <header>
+        <nav id="navbar" class="navbar flex flex-col text-center text-white bg-stone-700 w-12 h-screen rounded-r-lg">
+
+            <img src="src/Logotipo Juegos Láser en Negro y Rojo.jpg" class="mt-6 max-width-max">
+            <section id="left-menu" class="flex flex-col gap-8 h-screen">    
+                <a href="href/SobreMi.html">
+                    <div class="flex transition ease-in-out hover:font-semibold hover:bg-sky-700 h-10 pt-2">
+                        <img src="src/user.png" class="w-8 h-8 p-1 -mt-1 ml-2 mx-2">
+                        <p class="truncate">Sobre mi</p>
+                    </div>
+                </a>
+                <a href="href/Habilidades.html">
+                    <div class="flex transition ease-in-out hover:font-semibold hover:bg-sky-700 h-10 pt-2">
+                        <img src="src/skills.png" class="w-8 h-8 p-1 -mt-1 ml-2 mx-2">
+                        <p class="truncate">Habilidades</p>
+                    </div>
+                </a>
+                <a href="href/Proyectos.html">
+                    <div class="flex transition ease-in-out hover:font-semibold hover:bg-sky-700 h-10 pt-2">
+                        <img src="src/layers.png" class="w-8 h-8 p-1 -mt-1 ml-2 mx-2">
+                        <p class="truncate">Proyectos</p>
+                    </div>
+                </a>
+                <a href="href/Experiencia.html">
+                    <div class="flex transition ease-in-out hover:font-semibold hover:bg-sky-700 h-10 pt-2">
+                        <img src="src/briefcase.png" class="w-8 h-8 p-1 -mt-1 mx-2">
+                        <p class="truncate">Experiencia</p>
+                    </div>
+                </a>
+                <a href="href/ContactMe.html">
+                    <div class="flex transition ease-in-out hover:font-semibold hover:bg-sky-700 h-10 pt-2">
+                        <img src="src/chat.png" class="w-8 h-8 p-1 -mt-1 mx-2">
+                        <p class="truncate">Contact Me</p>
+                    </div>
+                </a>
+            </section>
+        </nav>
+    </header>    
+</body>
+
+</html>

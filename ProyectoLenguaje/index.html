@@ -7,64 +7,102 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>My Portfolio</title>
     <style>
-        /*#hidden-text {        //EL TAIWIND ES UNA MIERDA Y SU ATRIBUTO PARA ESTAS DOS LÍNEAS INCLUYE LA ELIPLSIS QUE HACE QUE QUEDE FEO EL EFECTO 
+        @font-face { font-family: Mifuente; src: url("src/font/BitBold.ttf"); } 
+        h1, #hidden-text {
+            font-family: Mifuente;
+        }
+        #hidden-text {
             white-space: nowrap;
             overflow: hidden;
-        }*/
-      
-        #navbar:hover {
-            width: 144px;
-           
+        }
+        #navbar:hover #left-menu {
+            margin-top: 2.25rem;
         }
         #left-menu {
-            margin-top: 7rem;
-            transition: all 0.5s;
+            margin-top: 9.25rem;
         }
-
-        #navbar:hover #left-menu {
-            margin-top: 1rem;
-           
+        #navbar:hover #user-icon {
+            margin-left: 1.75rem;
+            margin-right: 1.75rem;
+            margin-top: 2.5rem;
+            box-shadow: 
+                0 0 .2rem #fff,
+                0 0 .2rem #fff,
+                0 0 2rem #bc13fe,
+                0 0 0.8rem #bc13fe,
+                0 0 2.8rem #bc13fe,
+                inset 0 0 1.3rem #bc13fe;
+            animation: parpadeo 4s infinite alternate;
         }
-        #navbar {
-            transition: width 0.5s;
+        #glow-animation {
+            animation: glow 3s ease infinite alternate;
+        }
+        @keyframes glow {
+        
+            0% {
+                text-shadow: 0 0 20px #0369a1, 0 0 30px #ff4df6, 0 0 50px #ff4de1, 0 0 70px #4dd5ff, 0 0 80px #4ddbff;
+            }
+            
+            75% {
+                text-shadow: 0;
+            }
+        }
+        @keyframes parpadeo {
+    
+            0%, 18%, 22%, 25%, 53%, 57%, 100% {
+        
+                box-shadow:
+                0 0 .2rem #fff,
+                0 0 .2rem #fff,
+                0 0 2rem #bc13fe,
+                0 0 0.8rem #bc13fe,
+                0 0 2.8rem #bc13fe,
+                inset 0 0 1.3rem #bc13fe;
+            }
+            
+            20%, 24%, 55% {        
+                box-shadow: none;
+            }    
         }
     </style>
 </head>
 
-<body class="bg-fixed bg-no-repeat bg-center bg-cover relative" style="background-image: url(src/fondo.jpg)">
+<body class="bg-stone-800">
+    <h1 id="glow-animation" class="absolute z-1 inset-1/2 -translate-x-1/2 -translate-y-1/2 w-max h-max text-9xl text-sky-700">> Your name</h1>
     <header>
-        <nav id="navbar" class="navbar flex flex-col text-center text-white bg-stone-700 w-12 h-screen rounded-r-lg">
+        <nav id="navbar" class="absolute z-2 flex flex-col text-center text-white bg-stone-700 w-12 hover:w-48 h-screen rounded-r-lg border-solid border-b-4 border-t-4 border-sky-700 outline outline-4 outline-sky-700 drop-shadow-lg hover:drop-shadow-xl duration-500">
 
-            <img src="src/Logotipo Juegos Láser en Negro y Rojo.jpg" class="mt-6 max-width-max">
-            <section id="left-menu" class="flex flex-col gap-8 h-screen">    
+            <div id="user-icon" class="rounded-full border-solid border-sky-700 border-2 aspect-square margin m-1 mt-6 duration-500"><img src="src/IconUser.svg" class=" max-width-max"></div> 
+
+            <section id="left-menu" class="flex flex-col gap-8 h-screen  duration-500">
                 <a href="href/SobreMi.html">
-                    <div class="flex transition ease-in-out hover:font-semibold hover:bg-sky-700 h-10 pt-2">
-                        <img src="src/user.png" class="w-8 h-8 p-1 -mt-1 ml-2 mx-2">
-                        <p class="truncate">Sobre mi</p>
+                    <div class="flex transition ease-in-out  hover:bg-sky-700 h-10 pt-2">
+                        <img src="src/user.png" class="w-8 h-8 p-1 -mt-1 mx-2">
+                        <p id="hidden-text">Sobre mi</p>
                     </div>
                 </a>
                 <a href="href/Habilidades.html">
-                    <div class="flex transition ease-in-out hover:font-semibold hover:bg-sky-700 h-10 pt-2">
+                    <div class="flex transition ease-in-out  hover:bg-sky-700 h-10 pt-2">
                         <img src="src/skills.png" class="w-8 h-8 p-1 -mt-1 ml-2 mx-2">
-                        <p class="truncate">Habilidades</p>
+                        <p id="hidden-text">Habilidades</p>
                     </div>
                 </a>
                 <a href="href/Proyectos.html">
-                    <div class="flex transition ease-in-out hover:font-semibold hover:bg-sky-700 h-10 pt-2">
+                    <div class="flex transition ease-in-out  hover:bg-sky-700 h-10 pt-2">
                         <img src="src/layers.png" class="w-8 h-8 p-1 -mt-1 ml-2 mx-2">
-                        <p class="truncate">Proyectos</p>
+                        <p id="hidden-text">Proyectos</p>
                     </div>
                 </a>
                 <a href="href/Experiencia.html">
-                    <div class="flex transition ease-in-out hover:font-semibold hover:bg-sky-700 h-10 pt-2">
+                    <div class="flex transition ease-in-out  hover:bg-sky-700 h-10 pt-2">
                         <img src="src/briefcase.png" class="w-8 h-8 p-1 -mt-1 mx-2">
-                        <p class="truncate">Experiencia</p>
+                        <p id="hidden-text">Experiencia</p>
                     </div>
                 </a>
                 <a href="href/ContactMe.html">
-                    <div class="flex transition ease-in-out hover:font-semibold hover:bg-sky-700 h-10 pt-2">
+                    <div class="flex transition ease-in-out  hover:bg-sky-700 h-10 pt-2">
                         <img src="src/chat.png" class="w-8 h-8 p-1 -mt-1 mx-2">
-                        <p class="truncate">Contact Me</p>
+                        <p id="hidden-text">Contact Me</p>
                     </div>
                 </a>
             </section>

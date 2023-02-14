@@ -1,0 +1,130 @@
+@font-face { font-family: Mifuente; src: url("src/font/BitBold.ttf"); } 
+#glow-animation, #glow-animation1, #hidden-text {
+    font-family: Mifuente;
+}
+#hidden-text {
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 20px;        
+}
+#navbar:hover #user-icon {
+    margin-left: 1.75rem;
+    margin-right: 1.75rem;
+    margin-top: 2.5rem;
+    box-shadow: 
+        0 0 .2rem #fff,
+        0 0 .2rem #fff,
+        0 0 2rem #bc13fe,
+        0 0 0.8rem #bc13fe,
+        0 0 2.8rem #bc13fe,
+        inset 0 0 1.3rem #bc13fe;
+    animation: parpadeo 4s infinite alternate;
+}
+#glow-animation {
+    transition: all 0.25s;
+    padding-left: 5rem;
+    animation: glow 3s ease infinite alternate;
+    font-size: 150px;       /*Tailwind máximo de 9xl = 8rem*/
+}
+#glow-animation1 {
+    transition: all 0.25s;
+    padding-left: 5rem;
+    /*animation: glow 3s ease infinite alternate;*/
+    font-size: 150px;       /*Tailwind máximo de 9xl = 8rem*/
+    text-shadow: 0 1px 0 #0369a1;
+}
+@keyframes glow {        
+    0% {
+        text-shadow: 0 0 20px #0369a1, 0 0 30px #ff4df6, 0 0 50px #ff4de1, 0 0 70px #4dd5ff, 0 0 80px #4ddbff;
+    }            
+    75% {
+        text-shadow: 0 1px 0 #0369a1;
+    }
+    100% {
+        text-shadow: 0 1px 0 #0369a1;
+    }
+}
+@keyframes parpadeo {    
+    18%, 22%, 25%, 53%, 57%, 75%, 99% {     
+        box-shadow:
+        0 0 .2rem #fff,
+        0 0 .2rem #fff,
+        0 0 2rem #bc13fe,
+        0 0 0.8rem #bc13fe,
+        0 0 2.8rem #bc13fe,
+        inset 0 0 1.3rem #bc13fe;
+    }            
+    0%, 20%, 24%, 55% {        
+        box-shadow: none;
+    } 
+}
+#ceiling {
+    transform-style: preserve-3d;   /*No se encuentra en tailwind*/
+    perspective: 1000px;            /*No se encuentra en tailwind*/
+}
+#floor {
+    margin-top: 900px;              /*El margin top del tailwind se expresa en rem, y con este margin debe de quedar así para que la página sea responsive*/
+    transform: rotateX(85deg);      /*El rotate de tailwind no permite varíar entre X o Y, es lógico teniendo en cuenta que no nos ha permitido el traform-style: preserve-3d*/
+    translate: 0 100px;
+    box-shadow: 0 50px 200px;       /*El shadow box máximo de tailwind es el 2xl y es de 0,25,50. Demasiado pequeño para lo que busco*/
+    background-image:               /*Esta creación del fondo del suelo obviamente es demasiado específica para tailwind*/
+        linear-gradient(rgba(255,255,255,.25) 2px, transparent 2px),
+        linear-gradient(90deg, rgba(255,255,255,.25) 2px, transparent 2px),
+        linear-gradient(rgba(255,255,255,.14) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.14) 1px, transparent 1px);
+    background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;    /*El bg-size de tailwind solo permite los valores de outo, cover, contain*/
+    background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;    /*Al igual que en el bg-size el position solo permite botom, center,left y right. No permite valores*/
+}
+
+        /*RESPONSIVENESS*/
+
+@media(max-height:900px){
+    #navbar:hover #user-icon {
+        margin: 1.5rem 2.75rem 2.75rem;
+    }
+}
+@media(max-height:800px){
+    #navbar:hover #user-icon {
+        margin: 1.5rem 3rem 0 3rem;
+    }
+}
+@media(max-height:750px){
+    #navbar:hover #user-icon {
+        margin: 1.5rem 4rem 0 4rem;
+    }
+    #left-menu {
+        gap: 1rem;
+    }
+    #hidden-text {
+        font-size: 15px;
+        padding-top: 0.25rem;
+    }
+}
+@media(max-height:600px){
+    #left-menu {
+        gap: 0.25rem;
+    }
+    #user-icon {
+    transition: all 0.5s;
+    }
+    #navbar:hover #user-icon {
+        margin: 1.5rem 4.5rem 0 4.5rem;
+    }
+    #hidden-text {
+        font-size: 15px;
+        padding-top: 0.25rem;
+    }
+}
+@media(max-width:750px){
+    #glow-animation {
+        font-size: 125px;
+    }
+}
+@media(max-width:750px){
+    #glow-animation {
+        font-size: 75px;
+    }
+}
+#user-icon {
+    transition: all 0.5s;
+}

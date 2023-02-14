@@ -5,103 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
     <title>My Portfolio</title>
-    <style>
-        @font-face { font-family: Mifuente; src: url("src/font/BitBold.ttf"); } 
-        h1, #hidden-text {
-            font-family: Mifuente;
-        }
-        #hidden-text {
-            white-space: nowrap;
-            overflow: hidden;
-        }
-        #navbar:hover #left-menu {
-            margin-top: 2.25rem;
-        }
-        #left-menu {
-            margin-top: 9.25rem;
-        }
-        #navbar:hover #user-icon {
-            margin-left: 1.75rem;
-            margin-right: 1.75rem;
-            margin-top: 2.5rem;
-            box-shadow: 
-                0 0 .2rem #fff,
-                0 0 .2rem #fff,
-                0 0 2rem #bc13fe,
-                0 0 0.8rem #bc13fe,
-                0 0 2.8rem #bc13fe,
-                inset 0 0 1.3rem #bc13fe;
-            animation: parpadeo 4s infinite alternate;
-        }
-        #glow-animation {
-            animation: glow 3s ease infinite alternate;
-        }
-        @keyframes glow {
-        
-            0% {
-                text-shadow: 0 0 20px #0369a1, 0 0 30px #ff4df6, 0 0 50px #ff4de1, 0 0 70px #4dd5ff, 0 0 80px #4ddbff;
-            }
-            
-            75% {
-                text-shadow: 0;
-            }
-        }
-        @keyframes parpadeo {
-    
-            0%, 18%, 22%, 25%, 53%, 57%, 100% {
-        
-                box-shadow:
-                0 0 .2rem #fff,
-                0 0 .2rem #fff,
-                0 0 2rem #bc13fe,
-                0 0 0.8rem #bc13fe,
-                0 0 2.8rem #bc13fe,
-                inset 0 0 1.3rem #bc13fe;
-            }
-            
-            20%, 24%, 55% {        
-                box-shadow: none;
-            }    
-        }
-    </style>
 </head>
 
-<body class="bg-stone-800">
-    <h1 id="glow-animation" class="absolute z-1 inset-1/2 -translate-x-1/2 -translate-y-1/2 w-max h-max text-9xl text-sky-700">> Your name</h1>
+<body class="bg-stone-800 overflow-hidden">
+    <div id="ceiling" class="w-screen h-screen absolute flex items-center justify-center overflow-hidden absolute">
+        <div id="floor" class="absolute w-screen h-screen origin-top"></div>
+    </div>
+    <div id="glow-animation" class="flex justify-center items-center absolute w-screen h-screen text-sky-700"><p class="z-30 p-24 text-center">> Your name</p></div>
     <header>
-        <nav id="navbar" class="absolute z-2 flex flex-col text-center text-white bg-stone-700 w-12 hover:w-48 h-screen rounded-r-lg border-solid border-b-4 border-t-4 border-sky-700 outline outline-4 outline-sky-700 drop-shadow-lg hover:drop-shadow-xl duration-500">
+        <nav id="navbar" class="absolute z-40 grid grid-cols-1 text-center text-white bg-stone-700 w-14 hover:w-60 h-screen rounded-r-lg border-solid border-b-4 border-t-4 border-sky-700 outline outline-4 outline-sky-700 drop-shadow-lg hover:drop-shadow-xl duration-500">
 
-            <div id="user-icon" class="rounded-full border-solid border-sky-700 border-2 aspect-square margin m-1 mt-6 duration-500"><img src="src/IconUser.svg" class=" max-width-max"></div> 
+            <div id="user-icon" class="absolute z-10 rounded-full border-solid border-sky-700 border-2 margin m-1 mt-6 duration-500 justify-self-center"><img src="src/IconUser.svg"></div> 
 
-            <section id="left-menu" class="flex flex-col gap-8 h-screen  duration-500">
+            <section id="left-menu" class="z-20 flex justify-center flex-col gap-8 h-screen  duration-500">
                 <a href="href/SobreMi.html">
-                    <div class="flex transition ease-in-out  hover:bg-sky-700 h-10 pt-2">
-                        <img src="src/user.png" class="w-8 h-8 p-1 -mt-1 mx-2">
-                        <p id="hidden-text">Sobre mi</p>
+                    <div class=" flex transition ease-in-out  hover:bg-sky-700 h-12 pt-2">
+                        <img src="src/user.png" class="w-10 h-10 p-1 -mt-2 mx-2">
+                        <p id="hidden-text" class="h-12 text-center">Sobre mi</p>
                     </div>
                 </a>
                 <a href="href/Habilidades.html">
-                    <div class="flex transition ease-in-out  hover:bg-sky-700 h-10 pt-2">
-                        <img src="src/skills.png" class="w-8 h-8 p-1 -mt-1 ml-2 mx-2">
+                    <div class="flex transition ease-in-out  hover:bg-sky-700 h-12 pt-2">
+                        <img src="src/skills.png" class="w-10 h-10 p-1 -mt-1 ml-2 mx-2">
                         <p id="hidden-text">Habilidades</p>
                     </div>
                 </a>
                 <a href="href/Proyectos.html">
-                    <div class="flex transition ease-in-out  hover:bg-sky-700 h-10 pt-2">
-                        <img src="src/layers.png" class="w-8 h-8 p-1 -mt-1 ml-2 mx-2">
+                    <div class="flex transition ease-in-out  hover:bg-sky-700 h-12 pt-2">
+                        <img src="src/layers.png" class="w-10 h-10 p-1 -mt-1 ml-2 mx-2">
                         <p id="hidden-text">Proyectos</p>
                     </div>
                 </a>
                 <a href="href/Experiencia.html">
-                    <div class="flex transition ease-in-out  hover:bg-sky-700 h-10 pt-2">
-                        <img src="src/briefcase.png" class="w-8 h-8 p-1 -mt-1 mx-2">
+                    <div class="flex transition ease-in-out  hover:bg-sky-700 h-12 pt-2">
+                        <img src="src/briefcase.png" class="w-10 h-10 p-1 -mt-2 mx-2">
                         <p id="hidden-text">Experiencia</p>
                     </div>
                 </a>
                 <a href="href/ContactMe.html">
-                    <div class="flex transition ease-in-out  hover:bg-sky-700 h-10 pt-2">
-                        <img src="src/chat.png" class="w-8 h-8 p-1 -mt-1 mx-2">
+                    <div class="flex transition ease-in-out  hover:bg-sky-700 h-12 pt-2">
+                        <img src="src/chat.png" class="w-10 h-10 p-1 -mt-1 mx-2">
                         <p id="hidden-text">Contact Me</p>
                     </div>
                 </a>

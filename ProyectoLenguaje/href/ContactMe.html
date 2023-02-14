@@ -7,11 +7,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Contact Me</title>
     <style>
-        /*#hidden-text {        //EL TAIWIND ES UNA MIERDA Y SU ATRIBUTO PARA ESTAS DOS LÍNEAS INCLUYE LA ELIPLSIS QUE HACE QUE QUEDE FEO EL EFECTO 
-            white-space: nowrap;
-            overflow: hidden;
-        }*/
-      
         #navbar:hover {
             width: 144px;
            
@@ -28,49 +23,78 @@
         #navbar {
             transition: width 0.5s;
         }
+        #social a {
+        transform: perspective(1000px) skew(25deg);
+        transition: all 0.5s ease-in-out;
+        }
+        #social a::before {
+        content: "";
+        left: -20px;
+        transform: skewY(-45deg);
+        }
+        #social a::after {
+        content: "";
+        bottom: -20px;
+        left: -10px;
+        transform: skewX(-45deg);
+        }
+        #social a:hover {
+        transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(20px, -20px);
+        box-shadow: -50px 50px 30px rgba(0, 0, 0, 0.5);
+        }
     </style>
 </head>
-
-<body class="bg-fixed bg-no-repeat bg-center bg-cover relative" style="background-image: url(/ProyectoLenguaje/src/fondo.jpg)">
+<body class="bg-stone-800">
     <div class="bg-stone-800/95">
+        <div class="flex absolute z-1 justify-center items-center w-screen h-screen">    
+            <div class="">
+                <div id="social" class="inline-block m-14 cursor-pointer"><a class="block bg-black p-5 rotate-45 translate-x-0 translate-y-0 shadow-2xl before:block before:absolute before:w-5 before:h-full before:left-5 before:top-2.5 before:bg-gray-600/50 before:rotate-0 after:block after:absolute after:left-2.5 after:h-5 after:w-full after:rotate-0 after:bg-gray-900/50 after:rotate-45" href="https://twitter.com/?lang=es"> <img src="../src/Twiter.jpg" class="w-40 h-40"></a></div>
+                <div id="social" class="inline-block m-14 cursor-pointer"><a class="block bg-black p-5 rotate-45 translate-x-0 translate-y-0 shadow-2xl before:block before:absolute before:w-5 before:h-full before:left-5 before:top-2.5 before:bg-gray-600/50 before:rotate-0 after:block after:absolute after:left-2.5 after:h-5 after:w-full after:rotate-0 after:bg-gray-900/50 after:rotate-45" href="https://es.linkedin.com/"> <img src="../src/in.png" class="w-40 h-40"></a></div>
+                <div id="social" class="inline-block m-14 cursor-pointer"><a class="block bg-black p-5 rotate-45 translate-x-0 translate-y-0 shadow-2xl before:block before:absolute before:w-5 before:h-full before:left-5 before:top-2.5 before:bg-gray-600/50 before:rotate-0 after:block after:absolute after:left-2.5 after:h-5 after:w-full after:rotate-0 after:bg-gray-900/50 after:rotate-45" href="https://www.instagram.com/"> <img src="../src/insta.jpg" class="w-40 h-40"></a></div>
+                <div id="social" class="inline-block m-14 cursor-pointer"><a class="block bg-black p-5 rotate-45 translate-x-0 translate-y-0 shadow-2xl before:block before:absolute before:w-5 before:h-full before:left-5 before:top-2.5 before:bg-gray-600/50 before:rotate-0 after:block after:absolute after:left-2.5 after:h-5 after:w-full after:rotate-0 after:bg-gray-900/50 after:rotate-45" href="https://es-es.facebook.com/"> <img src="../src/facebook.png" class="w-40 h-40"></a></div>
+                <div id="social" class="inline-block m-14 cursor-pointer"><a class="block bg-black p-5 rotate-45 translate-x-0 translate-y-0 shadow-2xl before:block before:absolute before:w-5 before:h-full before:left-5 before:top-2.5 before:bg-gray-600/50 before:rotate-0 after:block after:absolute after:left-2.5 after:h-5 after:w-full after:rotate-0 after:bg-gray-900/50 after:rotate-45" href="https://www.google.com/intl/es/gmail/about/"> <img src="../src/gmail.jpg" class="w-40 h-40"></a></div>
+            </div>
+        </div>
         <header>
-            <nav id="navbar" class="navbar flex flex-col text-center text-white bg-stone-700 w-12 h-screen rounded-r-lg">
+            <nav id="navbar" class="absolute z-2 navbar flex flex-col text-center text-white bg-stone-700 w-12 h-screen rounded-r-lg">
 
-                <a href="/ProyectoLenguaje/index.html"><img src="/ProyectoLenguaje/src/Logotipo Juegos Láser en Negro y Rojo.jpg" class="mt-6 max-width-max"></a>
+                <a href="../index.html"><img src="../src/Logotipo Juegos Láser en Negro y Rojo.jpg" class="mt-6 max-width-max"></a>
                 <section id="left-menu" class="flex flex-col gap-8 h-screen">    
-                    <a href="SobreMi.html">
+                    <a href="../href/SobreMi.html">
                         <div class="flex transition ease-in-out hover:font-semibold hover:bg-sky-700 h-10 pt-2">
-                            <img src="/ProyectoLenguaje/src/user.png" class="w-8 h-8 p-1 -mt-1 ml-2 mx-2">
+                            <img src="../src/user.png" class="w-8 h-8 p-1 -mt-1 ml-2 mx-2">
                             <p class="truncate">Sobre mi</p>
                         </div>
                     </a>
-                    <a href="Habilidades.html">
+                    <a href="../href/Habilidades.html">
                         <div class="flex transition ease-in-out hover:font-semibold hover:bg-sky-700 h-10 pt-2">
-                            <img src="/ProyectoLenguaje/src/skills.png" class="w-8 h-8 p-1 -mt-1 ml-2 mx-2">
+                            <img src="../src/skills.png" class="w-8 h-8 p-1 -mt-1 ml-2 mx-2">
                             <p class="truncate">Habilidades</p>
                         </div>
                     </a>
-                    <a href="Proyectos.html">
+                    <a href="../href/Proyectos.html">
                         <div class="flex transition ease-in-out hover:font-semibold hover:bg-sky-700 h-10 pt-2">
-                            <img src="/ProyectoLenguaje/src/layers.png" class="w-8 h-8 p-1 -mt-1 ml-2 mx-2">
+                            <img src="../src/layers.png" class="w-8 h-8 p-1 -mt-1 ml-2 mx-2">
                             <p class="truncate">Proyectos</p>
                         </div>
                     </a>
-                    <a href="Experiencia.html">
+                    <a href="../href/Experiencia.html">
                         <div class="flex transition ease-in-out hover:font-semibold hover:bg-sky-700 h-10 pt-2">
-                            <img src="/ProyectoLenguaje/src/briefcase.png" class="w-8 h-8 p-1 -mt-1 mx-2">
+                            <img src="../src/briefcase.png" class="w-8 h-8 p-1 -mt-1 mx-2">
                             <p class="truncate">Experiencia</p>
                         </div>
                     </a>
                     
                         <div class="flex transition ease-in-out hover:font-semibold hover:bg-sky-700 h-10 pt-2">
-                            <img src="/ProyectoLenguaje/src/chat.png" class="w-8 h-8 p-1 -mt-1 mx-2">
+                            <img src="../src/chat.png" class="w-8 h-8 p-1 -mt-1 mx-2">
                             <p class="truncate">Contact Me</p>
                         </div>
-                    
                 </section>
+                
+                  </div>
             </nav>
-        </header>    
+        </header>
+        
     </div>
 </body>
 

@@ -128,3 +128,35 @@
 #user-icon {
     transition: all 0.5s;
 }
+
+
+
+
+/*ABOUT ME*/
+.tarjeta{
+    perspective: 1000px;
+}
+.tarjeta2{
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    width: 1000px;
+    height: 1000px;
+}
+.tarjeta:hover .tarjeta2 {
+    transform: rotateY(180deg);
+}
+.caraA, .caraB {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+.caraB{
+    transform: rotateY(180deg);
+    width: 1000px;
+    height: 1000px;
+}
+.img{
+    width: 1000px;
+    height: 1000px;
+}

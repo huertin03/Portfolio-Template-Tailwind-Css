@@ -5,103 +5,63 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../styles.css">
     <title>Sobre Mi</title>
     <meta name="viewport" content="width-device-width, user-scalable=1.0, maxi">
-    <style>
-        /*#hidden-text {        //EL TAIWIND ES UNA MIERDA Y SU ATRIBUTO PARA ESTAS DOS LÍNEAS INCLUYE LA ELIPLSIS QUE HACE QUE QUEDE FEO EL EFECTO 
-            white-space: nowrap;
-            overflow: hidden;
-        }*/
-        /*He puesto aqui el tamaño de las imagenes porque con Tailwind lo maximo es un w-96 y h-96 y cosas como los tranform y los perpective no existen*/
-        #navbar:hover {
-            width: 144px;
-           
-        }
-        #left-menu {
-            margin-top: 7rem;
-            transition: all 0.5s;
-        }
-
-        #navbar:hover #left-menu {
-            margin-top: 1rem;
-           
-        }
-        #navbar {
-            transition: width 0.5s;
-        }
-        .tarjeta{
-            perspective: 1000px;
-        }
-        .tarjeta2{
-            transition: transform 0.8s;
-            transform-style: preserve-3d;
-            width: 1000px;
-            height: 1000px;
-        }
-        .tarjeta:hover .tarjeta2 {
-            transform: rotateY(180deg);
-        }
-        .caraA, .caraB {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            backface-visibility: hidden;
-        }
-        .caraB{
-            transform: rotateY(180deg);
-            width: 1000px;
-            height: 1000px;
-        }
-        .img{
-            width: 1000px;
-            height: 1000px;
-        }
-    </style>
 </head>
 
-<body class="bg-stone-800 ">
-    <div class="bg-stone-800/95 absolute z-1">
-        <header>
-            <nav id="navbar" class="navbar flex flex-col text-center text-white bg-stone-700 w-12 h-screen rounded-r-lg">
-
-                <a href="../index.html"><img src="../src/Logotipo Juegos Láser en Negro y Rojo.jpg" class="mt-6 max-width-max"></a>
-                <section id="left-menu" class="flex flex-col gap-8 h-screen">    
-                    
-                        <div class="flex transition ease-in-out hover:font-semibold hover:bg-sky-700 h-10 pt-2">
-                            <img src="../src/user.png" class="w-8 h-8 p-1 -mt-1 ml-2 mx-2">
-                            <p class="truncate">Sobre mi</p>
-                        </div>
-                    
-                    <a href="Habilidades.html">
-                        <div class="flex transition ease-in-out hover:font-semibold hover:bg-sky-700 h-10 pt-2">
-                            <img src="../src/skills.png" class="w-8 h-8 p-1 -mt-1 ml-2 mx-2">
-                            <p class="truncate">Habilidades</p>
-                        </div>
-                    </a>
-                    <a href="Proyectos.html">
-                        <div class="flex transition ease-in-out hover:font-semibold hover:bg-sky-700 h-10 pt-2">
-                            <img src="../src/layers.png" class="w-8 h-8 p-1 -mt-1 ml-2 mx-2">
-                            <p class="truncate">Proyectos</p>
-                        </div>
-                    </a>
-                    <a href="Experiencia.html">
-                        <div class="flex transition ease-in-out hover:font-semibold hover:bg-sky-700 h-10 pt-2">
-                            <img src="../src/briefcase.png" class="w-8 h-8 p-1 -mt-1 mx-2">
-                            <p class="truncate">Experiencia</p>
-                        </div>
-                    </a>
-                    <a href="ContactMe.html">
-                        <div class="flex transition ease-in-out hover:font-semibold hover:bg-sky-700 h-10 pt-2">
-                            <img src="../src/chat.png" class="w-8 h-8 p-1 -mt-1 mx-2">
-                            <p class="truncate">Contact Me</p>
-                        </div>
-                    </a>
-                </section>
-            </nav>
-        </header>    
+<body class="bg-stone-800 overflow-hidden">
+    <div class="absolute z-30 w-screen h-screen bg-stone-800/90"></div>
+    <div id="ceiling" class="w-screen h-screen absolute flex items-center justify-center overflow-hidden absolute">
+        <div id="floor" class="absolute w-screen h-screen origin-top"></div>
     </div>
+    <div id="glow-animation1" class="flex justify-center items-center absolute w-screen h-screen text-sky-700"><p class="z-20 p-24 text-center">> Your name</p></div>
+    <header>
+        <nav id="navbar" class="absolute z-40 grid grid-cols-1 text-center text-white bg-stone-700 w-14 hover:w-60 h-screen rounded-r-lg border-solid border-b-4 border-t-4 border-sky-700 outline outline-4 outline-sky-700 drop-shadow-lg hover:drop-shadow-xl duration-500">
+
+            
+                <a href="../index.html" id="user-icon" class="absolute z-40 rounded-full border-solid border-sky-700 border-2 margin m-1 mt-6 duration-500 justify-self-center">
+                    <img src="../src/IconUser.svg">
+                </a>
+            
+
+            <section id="left-menu" class="z-20 flex justify-center flex-col gap-8 h-screen  duration-500">
+                <a href="../href/SobreMi.html">
+                    <div class=" flex transition ease-in-out  hover:bg-sky-700 h-12 pt-2">
+                        <img src="../src/user.png" class="w-10 h-10 p-1 -mt-2 mx-2">
+                        <p id="hidden-text" class="h-12 text-center">Sobre mi</p>
+                    </div>
+                </a>
+                <a href="../href/Habilidades.html">
+                    <div class="flex transition ease-in-out  hover:bg-sky-700 h-12 pt-2">
+                        <img src="../src/skills.png" class="w-10 h-10 p-1 -mt-1 ml-2 mx-2">
+                        <p id="hidden-text">Habilidades</p>
+                    </div>
+                </a>
+                <a href="../href/Proyectos.html">
+                    <div class="flex transition ease-in-out  hover:bg-sky-700 h-12 pt-2">
+                        <img src="../src/layers.png" class="w-10 h-10 p-1 -mt-1 ml-2 mx-2">
+                        <p id="hidden-text">Proyectos</p>
+                    </div>
+                </a>
+                <a href="../href/Experiencia.html">
+                    <div class="flex transition ease-in-out  hover:bg-sky-700 h-12 pt-2">
+                        <img src="../src/briefcase.png" class="w-10 h-10 p-1 -mt-2 mx-2">
+                        <p id="hidden-text">Experiencia</p>
+                    </div>
+                </a>
+                <a href="../href/ContactMe.html">
+                    <div class="flex transition ease-in-out  hover:bg-sky-700 h-12 pt-2">
+                        <img src="../src/chat.png" class="w-10 h-10 p-1 -mt-1 mx-2">
+                        <p id="hidden-text">Contact Me</p>
+                    </div>
+                </a>
+            </section>
+        </nav>
+    </header>
+
     <div class="flex w-screen h-screen justify-center items-center">
-        <div class="absolute z-1 align-middle tarjeta bg-transparent absolute">
+        <div class="absolute z-40 align-middle tarjeta bg-transparent absolute">
             <div class="tarjeta2 relative text-center">
                 <div class="caraA bg-black-900">
                     <img src="../src/SobreMi_img1.png" class="img">

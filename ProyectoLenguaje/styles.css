@@ -160,3 +160,37 @@
     width: 1000px;
     height: 1000px;
 }
+
+/*HABILIDADES*/
+
+#social a {
+transform: perspective(1000px) skew(25deg);
+transition: all 0.5s ease-in-out;
+}
+#social a::before {
+content: "";
+left: -20px;
+transform: skewY(-45deg);
+}
+#social a::after {
+content: "";
+bottom: -20px;
+left: -10px;
+transform: skewX(-45deg);
+}
+#social a:hover {
+transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(20px, -20px);
+box-shadow: -50px 50px 30px rgba(0, 0, 0, 0.5);
+}
+div #social:nth-of-type(1n+8) {
+    display: none;
+} 
+h3 {
+    padding-top: 1rem;
+    transition: all 1s;
+}
+#social a:hover + h3{
+    padding-top: 2.5rem;
+    color: #ffffff;
+
+}

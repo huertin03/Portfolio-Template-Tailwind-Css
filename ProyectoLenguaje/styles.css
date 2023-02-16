@@ -1,6 +1,6 @@
 @font-face { font-family: Mifuentetitulo; src: url("src/font/BitBold.ttf"); }
 @font-face { font-family: Mifuente; src: url("src/font/dogicapixel.ttf"); } 
-#glow-animation, #glow-animation1, #hidden-text, #project-panel {
+#glow-animation, #glow-animation1, #hidden-text, #project-panel, #cuatrocientoscuatro {
     font-family: Mifuentetitulo;
 }
 #hidden-text {
@@ -232,7 +232,7 @@ h3 {
 #project-panel:hover > p::after {
     content: '';
 }
-span {
+span, #not-found, #no-exp {
     font-family: Mifuente;
 }
 
@@ -247,7 +247,7 @@ span {
     background-image: url(src/hollywood.jpg);
 }
 #slide-1 {
-    background-image: url(src/portfolio.png);
+    background-image: url(src/portfolio.jpg);
 }
 
 /*CONTACT ME*/
@@ -317,4 +317,5 @@ box-shadow: inset 2px 2px 5px 0 #DADADA;
 #envio input {
 color: rgb(0, 0, 0);
 transition: all 250ms ease;
+
 }

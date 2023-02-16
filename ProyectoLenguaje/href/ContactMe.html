@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Contact Me</title>
+    <title>contacto Me</title>
     <style>
         #navbar:hover {
             width: 144px;
@@ -42,17 +42,93 @@
         transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(20px, -20px);
         box-shadow: -50px 50px 30px rgba(0, 0, 0, 0.5);
         }
+        @import url(https://fonts.googleapis.com/css?family=Oswald:400,700);
+    @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+#contacto::after {
+content: "";
+z-index: -1;
+}
+#mail {
+border-top: 2em solid transparent;
+border-left: 2.6em solid #202a83;
+}
+#mail:before {
+content: '';
+top: -2.5em;
+left: -2.95em;
+border-top: 1.2em solid #202a83;
+border-left: 1.6em solid transparent;
+border-right: 1.6em solid transparent;
+border-bottom: 1em solid transparent;
+}
+#mail::after {
+content: "";
+border-top: 2em solid transparent;
+border-right: 2.6em solid #202a83;
+left: -2.18em;
+}
+#checkcontacto{
+left: -9999px;
+}
+#contactoform {
+transition: all linear 1s;
+}
+#checkcontacto:checked + #contactoform {
+max-height: 1000px;
+}
+#textarea_superficie textarea {
+border: 1px solid #DADADA;
+box-shadow: 0 0 1px 0 #E4E4E4;
+transition: all 250ms ease;
+color: #2600ff;
+}
+#input_superficie input {
+border: 1px solid #DADADA;
+box-shadow: 0 0 1px 0 #E4E4E4;
+box-sizing: border-box;
+transition: all 250ms ease;
+color: #2600ff;
+}
+#input_superficie input:focus {
+background: rgba(242, 56, 90, 0.05);
+box-shadow: inset 2px 2px 5px 0 #DADADA;
+}
+#input_superficie label {
+color: rgb(0, 0, 0);
+transition: all 250ms ease;
+}
+#input_superficie input:focus + label {
+left: 85%;
+}
+#textarea_superficie textarea:focus {
+background: rgba(242, 56, 90, 0.05);
+box-shadow: inset 2px 2px 5px 0 #DADADA;
+}
+#envio input {
+color: rgb(0, 0, 0);
+transition: all 250ms ease;
+}
     </style>
 </head>
 <body class="bg-stone-800">
     <div class="bg-stone-800/95">
         <div class="flex absolute z-1 justify-center items-center w-screen h-screen">    
             <div class="">
-                <div id="social" class="inline-block m-14 cursor-pointer"><a class="block bg-black p-5 rotate-45 translate-x-0 translate-y-0 shadow-2xl before:block before:absolute before:w-5 before:h-full before:left-5 before:top-2.5 before:bg-gray-600/50 before:rotate-0 after:block after:absolute after:left-2.5 after:h-5 after:w-full after:rotate-0 after:bg-gray-900/50 after:rotate-45" href="https://twitter.com/?lang=es"> <img src="../src/Twiter.jpg" class="w-40 h-40"></a></div>
-                <div id="social" class="inline-block m-14 cursor-pointer"><a class="block bg-black p-5 rotate-45 translate-x-0 translate-y-0 shadow-2xl before:block before:absolute before:w-5 before:h-full before:left-5 before:top-2.5 before:bg-gray-600/50 before:rotate-0 after:block after:absolute after:left-2.5 after:h-5 after:w-full after:rotate-0 after:bg-gray-900/50 after:rotate-45" href="https://es.linkedin.com/"> <img src="../src/in.png" class="w-40 h-40"></a></div>
-                <div id="social" class="inline-block m-14 cursor-pointer"><a class="block bg-black p-5 rotate-45 translate-x-0 translate-y-0 shadow-2xl before:block before:absolute before:w-5 before:h-full before:left-5 before:top-2.5 before:bg-gray-600/50 before:rotate-0 after:block after:absolute after:left-2.5 after:h-5 after:w-full after:rotate-0 after:bg-gray-900/50 after:rotate-45" href="https://www.instagram.com/"> <img src="../src/insta.jpg" class="w-40 h-40"></a></div>
-                <div id="social" class="inline-block m-14 cursor-pointer"><a class="block bg-black p-5 rotate-45 translate-x-0 translate-y-0 shadow-2xl before:block before:absolute before:w-5 before:h-full before:left-5 before:top-2.5 before:bg-gray-600/50 before:rotate-0 after:block after:absolute after:left-2.5 after:h-5 after:w-full after:rotate-0 after:bg-gray-900/50 after:rotate-45" href="https://es-es.facebook.com/"> <img src="../src/facebook.png" class="w-40 h-40"></a></div>
-                <div id="social" class="inline-block m-14 cursor-pointer"><a class="block bg-black p-5 rotate-45 translate-x-0 translate-y-0 shadow-2xl before:block before:absolute before:w-5 before:h-full before:left-5 before:top-2.5 before:bg-gray-600/50 before:rotate-0 after:block after:absolute after:left-2.5 after:h-5 after:w-full after:rotate-0 after:bg-gray-900/50 after:rotate-45" href="https://www.google.com/intl/es/gmail/about/"> <img src="../src/gmail.jpg" class="w-40 h-40"></a></div>
+                <section id="contacto" class="w-96 m-9 relative bg-black after:block after:h-8 after:w-11/12 after:absolute after:bottom-0 after:shadow-black after:rounded-full after:left-2 w-full">
+                    <div class="sectionheader">	<h1 class="bg-sky-700 text-xl p-2 relative">CONTACT ME</h1></div>
+                    <article class="p-4">
+                            <label for="checkcontacto" id="contactobutton" class="bg-sky-700 block text-center cursor-pointer w-full h-14 mb-0.5 mt-5 hover:mt-6 hover:mb-0 hover:ml-0.5"><div id="mail" class="mt-3 text-sm inline-block w-0 h-0 relative before:block before:absolute before:text-xs after:absolute after:block after:h-0 after:w-0 after:bottom-0"></div></label><input id="checkcontacto" class="absolute" type="checkbox">
+                    
+                            <form action="" method="post" id="contactoform" class="truncate max-h-0">
+                                <p id="input_superficie" class="relative"><input class="mt-4 block w-full p-4 indent-5 focus:outline-0 focus:indent-0 text-center bg-white" name="contacto_nom" value=""  id ="contacto_nom"><label class="absolute top-0 left-0 h-full bg-sky-700 w-1/6 text-center leading-10 text-xs box-border" for="contacto_nom">NOMBRE</label></p>
+                                <p id="input_superficie" class="relative"><input class="mt-4 block w-full p-4 indent-5 focus:outline-0 focus:indent-0 text-center bg-white" name="contacto_nom" value=""  id ="contacto_nom"><label class="absolute top-0 left-0 h-full bg-sky-700 w-1/6 text-center leading-10 text-xs box-border" for="contacto_nom">APELLIDO</label></p>
+                                <p id="input_superficie" class="relative"><input class="mt-4 block w-full p-4 indent-5 focus:outline-0 focus:indent-0 text-center bg-white" name="contacto_email" value=""  id ="contacto_email"><label class="absolute top-0 left-0 h-full bg-sky-700 w-1/6 text-center leading-10 text-xs box-border" for="contacto_email">EMAIL</label></p>
+                                <p id="input_superficie" class="relative"><input class="mt-4 block w-full p-4 indent-5 focus:outline-0 focus:indent-0 text-center bg-white" name="contacto_sujet" value=""  id ="contacto_sujet"><label class="absolute top-0 left-0 h-full bg-sky-700 w-1/6 text-center leading-10 text-xs box-border" for="contacto_sujet">ESTUDIOS</label></p>
+                                <p id="textarea_superficie"><textarea class="w-full block mt-5 p-4 focus:outline-0 bg-white" name="contacto_message" id="contacto_message"></textarea></p>
+                                <p id="envio" class="text-center"><input type="submit" class="text-center inline-center w-2/5 h-12 mt-4 mb-1.5 cursor-pointer border-0 text-xs hover:mt-6 hover:ml-0.5 hover:mb-0 bg-sky-700" value="ENVIAR"></p>			
+                            </form>
+                    </article>
+                </section>
             </div>
         </div>
         <header>

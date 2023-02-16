@@ -249,3 +249,72 @@ span {
 #slide-1 {
     background-image: url(src/portfolio.png);
 }
+
+/*CONTACT ME*/
+      
+@import url(https://fonts.googleapis.com/css?family=Oswald:400,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+#contacto::after {
+content: "";
+z-index: -1;
+}
+#mail {
+border-top: 2em solid transparent;
+border-left: 2.6em solid #202a83;
+}
+#mail:before {
+content: '';
+top: -2.5em;
+left: -2.95em;
+border-top: 1.2em solid #202a83;
+border-left: 1.6em solid transparent;
+border-right: 1.6em solid transparent;
+border-bottom: 1em solid transparent;
+}
+#mail::after {
+content: "";
+border-top: 2em solid transparent;
+border-right: 2.6em solid #202a83;
+left: -2.18em;
+}
+#checkcontacto{
+left: -9999px;
+}
+#contactoform {
+transition: all linear 1s;
+}
+#checkcontacto:checked + #contactoform {
+max-height: 1000px;
+}
+#textarea_superficie textarea {
+border: 1px solid #DADADA;
+box-shadow: 0 0 1px 0 #E4E4E4;
+transition: all 250ms ease;
+color: #2600ff;
+}
+#input_superficie input {
+border: 1px solid #DADADA;
+box-shadow: 0 0 1px 0 #E4E4E4;
+box-sizing: border-box;
+transition: all 250ms ease;
+color: #2600ff;
+}
+#input_superficie input:focus {
+background: rgba(242, 56, 90, 0.05);
+box-shadow: inset 2px 2px 5px 0 #DADADA;
+}
+#input_superficie label {
+color: rgb(0, 0, 0);
+transition: all 250ms ease;
+}
+#input_superficie input:focus + label {
+left: 85%;
+}
+#textarea_superficie textarea:focus {
+background: rgba(242, 56, 90, 0.05);
+box-shadow: inset 2px 2px 5px 0 #DADADA;
+}
+#envio input {
+color: rgb(0, 0, 0);
+transition: all 250ms ease;
+}

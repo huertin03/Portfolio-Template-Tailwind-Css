@@ -5,114 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>contacto Me</title>
-    <style>
-        #navbar:hover {
-            width: 144px;
-           
-        }
-        #left-menu {
-            margin-top: 7rem;
-            transition: all 0.5s;
-        }
-
-        #navbar:hover #left-menu {
-            margin-top: 1rem;
-           
-        }
-        #navbar {
-            transition: width 0.5s;
-        }
-        #social a {
-        transform: perspective(1000px) skew(25deg);
-        transition: all 0.5s ease-in-out;
-        }
-        #social a::before {
-        content: "";
-        left: -20px;
-        transform: skewY(-45deg);
-        }
-        #social a::after {
-        content: "";
-        bottom: -20px;
-        left: -10px;
-        transform: skewX(-45deg);
-        }
-        #social a:hover {
-        transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(20px, -20px);
-        box-shadow: -50px 50px 30px rgba(0, 0, 0, 0.5);
-        }
-        @import url(https://fonts.googleapis.com/css?family=Oswald:400,700);
-    @import url(https://fonts.googleapis.com/css?family=Open+Sans);
-#contacto::after {
-content: "";
-z-index: -1;
-}
-#mail {
-border-top: 2em solid transparent;
-border-left: 2.6em solid #202a83;
-}
-#mail:before {
-content: '';
-top: -2.5em;
-left: -2.95em;
-border-top: 1.2em solid #202a83;
-border-left: 1.6em solid transparent;
-border-right: 1.6em solid transparent;
-border-bottom: 1em solid transparent;
-}
-#mail::after {
-content: "";
-border-top: 2em solid transparent;
-border-right: 2.6em solid #202a83;
-left: -2.18em;
-}
-#checkcontacto{
-left: -9999px;
-}
-#contactoform {
-transition: all linear 1s;
-}
-#checkcontacto:checked + #contactoform {
-max-height: 1000px;
-}
-#textarea_superficie textarea {
-border: 1px solid #DADADA;
-box-shadow: 0 0 1px 0 #E4E4E4;
-transition: all 250ms ease;
-color: #2600ff;
-}
-#input_superficie input {
-border: 1px solid #DADADA;
-box-shadow: 0 0 1px 0 #E4E4E4;
-box-sizing: border-box;
-transition: all 250ms ease;
-color: #2600ff;
-}
-#input_superficie input:focus {
-background: rgba(242, 56, 90, 0.05);
-box-shadow: inset 2px 2px 5px 0 #DADADA;
-}
-#input_superficie label {
-color: rgb(0, 0, 0);
-transition: all 250ms ease;
-}
-#input_superficie input:focus + label {
-left: 85%;
-}
-#textarea_superficie textarea:focus {
-background: rgba(242, 56, 90, 0.05);
-box-shadow: inset 2px 2px 5px 0 #DADADA;
-}
-#envio input {
-color: rgb(0, 0, 0);
-transition: all 250ms ease;
-}
-    </style>
+    <link rel="stylesheet" href="../styles.css">
+    <title>Contact Me</title>
 </head>
-<body class="bg-stone-800">
-    <div class="bg-stone-800/95">
-        <div class="flex absolute z-1 justify-center items-center w-screen h-screen">    
+
+<body class="bg-stone-800 overflow-hidden">
+        <div class="absolute z-40 w-screen h-screen bg-stone-800/95"></div>
+        <div class="flex absolute z-40 justify-center items-center w-screen h-screen">    
             <div class="">
                 <section id="contacto" class="w-96 m-9 relative bg-black after:block after:h-8 after:w-11/12 after:absolute after:bottom-0 after:shadow-black after:rounded-full after:left-2 w-full">
                     <div class="sectionheader">	<h1 class="bg-sky-700 text-xl p-2 relative">CONTACT ME</h1></div>
@@ -131,47 +30,53 @@ transition: all 250ms ease;
                 </section>
             </div>
         </div>
+        <div id="ceiling" class="w-screen h-screen absolute flex items-center justify-center overflow-hidden absolute">
+            <div id="floor" class="absolute w-screen h-screen origin-top"></div>
+        </div>
+        <div id="glow-animation1" class="flex justify-center items-center absolute w-screen h-screen text-sky-700"><p class="z-20 p-24 text-center">> Your name</p></div>
         <header>
-            <nav id="navbar" class="absolute z-2 navbar flex flex-col text-center text-white bg-stone-700 w-12 h-screen rounded-r-lg">
-
-                <a href="../index.html"><img src="../src/Logotipo Juegos Láser en Negro y Rojo.jpg" class="mt-6 max-width-max"></a>
-                <section id="left-menu" class="flex flex-col gap-8 h-screen">    
+            <nav id="navbar" class="absolute z-40 grid grid-cols-1 text-center text-white bg-stone-700 w-14 hover:w-60 h-screen rounded-r-lg border-solid border-b-4 border-t-4 border-sky-700 outline outline-4 outline-sky-700 drop-shadow-lg hover:drop-shadow-xl duration-500">
+    
+                
+                    <a href="../index.html" id="user-icon" class="absolute z-40 rounded-full border-solid border-sky-700 border-2 margin m-1 mt-6 duration-500 justify-self-center">
+                        <img src="../src/IconUser.svg">
+                    </a>
+                
+    
+                <section id="left-menu" class="z-20 flex justify-center flex-col gap-8 h-screen  duration-500">
                     <a href="../href/SobreMi.html">
-                        <div class="flex transition ease-in-out hover:font-semibold hover:bg-sky-700 h-10 pt-2">
-                            <img src="../src/user.png" class="w-8 h-8 p-1 -mt-1 ml-2 mx-2">
-                            <p class="truncate">Sobre mi</p>
+                        <div class=" flex transition ease-in-out  hover:bg-sky-700 h-12 pt-2">
+                            <img src="../src/user.png" class="w-10 h-10 p-1 -mt-2 mx-2">
+                            <p id="hidden-text" class="h-12 text-center">Sobre mi</p>
                         </div>
                     </a>
                     <a href="../href/Habilidades.html">
-                        <div class="flex transition ease-in-out hover:font-semibold hover:bg-sky-700 h-10 pt-2">
-                            <img src="../src/skills.png" class="w-8 h-8 p-1 -mt-1 ml-2 mx-2">
-                            <p class="truncate">Habilidades</p>
+                        <div class="flex transition ease-in-out  hover:bg-sky-700 h-12 pt-2">
+                            <img src="../src/skills.png" class="w-10 h-10 p-1 -mt-1 ml-2 mx-2">
+                            <p id="hidden-text">Habilidades</p>
                         </div>
                     </a>
                     <a href="../href/Proyectos.html">
-                        <div class="flex transition ease-in-out hover:font-semibold hover:bg-sky-700 h-10 pt-2">
-                            <img src="../src/layers.png" class="w-8 h-8 p-1 -mt-1 ml-2 mx-2">
-                            <p class="truncate">Proyectos</p>
+                        <div class="flex transition ease-in-out  hover:bg-sky-700 h-12 pt-2">
+                            <img src="../src/layers.png" class="w-10 h-10 p-1 -mt-1 ml-2 mx-2">
+                            <p id="hidden-text">Proyectos</p>
                         </div>
                     </a>
                     <a href="../href/Experiencia.html">
-                        <div class="flex transition ease-in-out hover:font-semibold hover:bg-sky-700 h-10 pt-2">
-                            <img src="../src/briefcase.png" class="w-8 h-8 p-1 -mt-1 mx-2">
-                            <p class="truncate">Experiencia</p>
+                        <div class="flex transition ease-in-out  hover:bg-sky-700 h-12 pt-2">
+                            <img src="../src/briefcase.png" class="w-10 h-10 p-1 -mt-2 mx-2">
+                            <p id="hidden-text">Experiencia</p>
                         </div>
                     </a>
-                    
-                        <div class="flex transition ease-in-out hover:font-semibold hover:bg-sky-700 h-10 pt-2">
-                            <img src="../src/chat.png" class="w-8 h-8 p-1 -mt-1 mx-2">
-                            <p class="truncate">Contact Me</p>
+                    <a href="../href/ContactMe.html">
+                        <div class="flex transition ease-in-out  hover:bg-sky-700 h-12 pt-2">
+                            <img src="../src/chat.png" class="w-10 h-10 p-1 -mt-1 mx-2">
+                            <p id="hidden-text">Contact Me</p>
                         </div>
+                    </a>
                 </section>
-                
-                  </div>
             </nav>
         </header>
-        
-    </div>
 </body>
-
 </html>
+

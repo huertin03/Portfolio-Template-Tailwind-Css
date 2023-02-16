@@ -1,6 +1,7 @@
-@font-face { font-family: Mifuente; src: url("src/font/BitBold.ttf"); } 
-#glow-animation, #glow-animation1, #hidden-text {
-    font-family: Mifuente;
+@font-face { font-family: Mifuentetitulo; src: url("src/font/BitBold.ttf"); }
+@font-face { font-family: Mifuente; src: url("src/font/dogicapixel.ttf"); } 
+#glow-animation, #glow-animation1, #hidden-text, #project-panel {
+    font-family: Mifuentetitulo;
 }
 #hidden-text {
     white-space: nowrap;
@@ -164,23 +165,23 @@
 /*HABILIDADES*/
 
 #social a {
-transform: perspective(1000px) skew(25deg);
-transition: all 0.5s ease-in-out;
+    transform: perspective(1000px) skew(25deg);
+    transition: all 0.5s ease-in-out;
 }
 #social a::before {
-content: "";
-left: -20px;
-transform: skewY(-45deg);
+    content: "";
+    left: -20px;
+    transform: skewY(-45deg);
 }
 #social a::after {
-content: "";
-bottom: -20px;
-left: -10px;
-transform: skewX(-45deg);
+    content: "";
+    bottom: -20px;
+    left: -10px;
+    transform: skewX(-45deg);
 }
 #social a:hover {
-transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(20px, -20px);
-box-shadow: -50px 50px 30px rgba(0, 0, 0, 0.5);
+    transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(20px, -20px);
+    box-shadow: -50px 50px 30px rgba(0, 0, 0, 0.5);
 }
 h3 {
     padding-top: 1rem;
@@ -211,4 +212,40 @@ h3 {
   
 .carousel__skip-link:focus {
     height: 680px;      /*Máximo height son 384 pixeles*/
+}
+#plus:hover > #git-icon {
+    margin-top: 0.625rem;
+    opacity: 1;
+}
+
+#project-panel {
+    margin-top: 69rem;
+}
+#project-panel:hover {
+    margin-top: 50rem;  /*Si lo ponemos sin el hover pq el máximo son 24 rem tmb hay que ponerlo con el hover en css pq sino no lo pilla*/
+}
+
+#project-panel > p::after {
+    content: ' ...';
+}
+
+#project-panel:hover > p::after {
+    content: '';
+}
+span {
+    font-family: Mifuente;
+}
+
+#slide-2 {
+    background-image: url(src/raspberry.png);
+}
+
+#slide-3 {
+    background-image: url(src/gamejam.png);
+}
+#slide-4 {
+    background-image: url(src/hollywood.jpg);
+}
+#slide-1 {
+    background-image: url(src/portfolio.png);
 }

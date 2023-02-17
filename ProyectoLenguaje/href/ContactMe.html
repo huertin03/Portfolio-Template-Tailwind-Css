@@ -5,97 +5,78 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../styles.css">
     <title>Contact Me</title>
-    <style>
-        #navbar:hover {
-            width: 144px;
-           
-        }
-        #left-menu {
-            margin-top: 7rem;
-            transition: all 0.5s;
-        }
-
-        #navbar:hover #left-menu {
-            margin-top: 1rem;
-           
-        }
-        #navbar {
-            transition: width 0.5s;
-        }
-        #social a {
-        transform: perspective(1000px) skew(25deg);
-        transition: all 0.5s ease-in-out;
-        }
-        #social a::before {
-        content: "";
-        left: -20px;
-        transform: skewY(-45deg);
-        }
-        #social a::after {
-        content: "";
-        bottom: -20px;
-        left: -10px;
-        transform: skewX(-45deg);
-        }
-        #social a:hover {
-        transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(20px, -20px);
-        box-shadow: -50px 50px 30px rgba(0, 0, 0, 0.5);
-        }
-    </style>
 </head>
-<body class="bg-stone-800">
-    <div class="bg-stone-800/95">
-        <div class="flex absolute z-1 justify-center items-center w-screen h-screen">    
+
+<body class="bg-stone-800 overflow-hidden">
+        <div class="absolute z-40 w-screen h-screen bg-stone-800/95"></div>
+        <div class="flex absolute z-40 justify-center items-center w-screen h-screen">    
             <div class="">
-                <div id="social" class="inline-block m-14 cursor-pointer"><a class="block bg-black p-5 rotate-45 translate-x-0 translate-y-0 shadow-2xl before:block before:absolute before:w-5 before:h-full before:left-5 before:top-2.5 before:bg-gray-600/50 before:rotate-0 after:block after:absolute after:left-2.5 after:h-5 after:w-full after:rotate-0 after:bg-gray-900/50 after:rotate-45" href="https://twitter.com/?lang=es"> <img src="../src/Twiter.jpg" class="w-40 h-40"></a></div>
-                <div id="social" class="inline-block m-14 cursor-pointer"><a class="block bg-black p-5 rotate-45 translate-x-0 translate-y-0 shadow-2xl before:block before:absolute before:w-5 before:h-full before:left-5 before:top-2.5 before:bg-gray-600/50 before:rotate-0 after:block after:absolute after:left-2.5 after:h-5 after:w-full after:rotate-0 after:bg-gray-900/50 after:rotate-45" href="https://es.linkedin.com/"> <img src="../src/in.png" class="w-40 h-40"></a></div>
-                <div id="social" class="inline-block m-14 cursor-pointer"><a class="block bg-black p-5 rotate-45 translate-x-0 translate-y-0 shadow-2xl before:block before:absolute before:w-5 before:h-full before:left-5 before:top-2.5 before:bg-gray-600/50 before:rotate-0 after:block after:absolute after:left-2.5 after:h-5 after:w-full after:rotate-0 after:bg-gray-900/50 after:rotate-45" href="https://www.instagram.com/"> <img src="../src/insta.jpg" class="w-40 h-40"></a></div>
-                <div id="social" class="inline-block m-14 cursor-pointer"><a class="block bg-black p-5 rotate-45 translate-x-0 translate-y-0 shadow-2xl before:block before:absolute before:w-5 before:h-full before:left-5 before:top-2.5 before:bg-gray-600/50 before:rotate-0 after:block after:absolute after:left-2.5 after:h-5 after:w-full after:rotate-0 after:bg-gray-900/50 after:rotate-45" href="https://es-es.facebook.com/"> <img src="../src/facebook.png" class="w-40 h-40"></a></div>
-                <div id="social" class="inline-block m-14 cursor-pointer"><a class="block bg-black p-5 rotate-45 translate-x-0 translate-y-0 shadow-2xl before:block before:absolute before:w-5 before:h-full before:left-5 before:top-2.5 before:bg-gray-600/50 before:rotate-0 after:block after:absolute after:left-2.5 after:h-5 after:w-full after:rotate-0 after:bg-gray-900/50 after:rotate-45" href="https://www.google.com/intl/es/gmail/about/"> <img src="../src/gmail.jpg" class="w-40 h-40"></a></div>
+                <section id="contacto" class="w-96 m-9 relative bg-black after:block after:h-8 after:w-11/12 after:absolute after:bottom-0 after:shadow-black after:rounded-full after:left-2 w-full">
+                    <div class="sectionheader">	<h1 class="bg-sky-700 text-xl p-2 relative">CONTACT ME</h1></div>
+                    <article class="p-4">
+                            <label for="checkcontacto" id="contactobutton" class="bg-sky-700 block text-center cursor-pointer w-full h-14 mb-0.5 mt-5 hover:mt-6 hover:mb-0 hover:ml-0.5"><div id="mail" class="mt-3 text-sm inline-block w-0 h-0 relative before:block before:absolute before:text-xs after:absolute after:block after:h-0 after:w-0 after:bottom-0"></div></label><input id="checkcontacto" class="absolute" type="checkbox">
+                    
+                            <form action="" method="post" id="contactoform" class="truncate max-h-0">
+                                <p id="input_superficie" class="relative"><input class="mt-4 block w-full p-4 indent-5 focus:outline-0 focus:indent-0 text-center bg-white" name="contacto_nom" value=""  id ="contacto_nom"><label class="absolute top-0 left-0 h-full bg-sky-700 w-1/6 text-center leading-10 text-xs box-border" for="contacto_nom">NOMBRE</label></p>
+                                <p id="input_superficie" class="relative"><input class="mt-4 block w-full p-4 indent-5 focus:outline-0 focus:indent-0 text-center bg-white" name="contacto_nom" value=""  id ="contacto_nom"><label class="absolute top-0 left-0 h-full bg-sky-700 w-1/6 text-center leading-10 text-xs box-border" for="contacto_nom">APELLIDO</label></p>
+                                <p id="input_superficie" class="relative"><input class="mt-4 block w-full p-4 indent-5 focus:outline-0 focus:indent-0 text-center bg-white" name="contacto_email" value=""  id ="contacto_email"><label class="absolute top-0 left-0 h-full bg-sky-700 w-1/6 text-center leading-10 text-xs box-border" for="contacto_email">EMAIL</label></p>
+                                <p id="input_superficie" class="relative"><input class="mt-4 block w-full p-4 indent-5 focus:outline-0 focus:indent-0 text-center bg-white" name="contacto_sujet" value=""  id ="contacto_sujet"><label class="absolute top-0 left-0 h-full bg-sky-700 w-1/6 text-center leading-10 text-xs box-border" for="contacto_sujet">ESTUDIOS</label></p>
+                                <p id="textarea_superficie"><textarea class="w-full block mt-5 p-4 focus:outline-0 bg-white" name="contacto_message" id="contacto_message"></textarea></p>
+                                <p id="envio" class="text-center"><input type="submit" class="text-center inline-center w-2/5 h-12 mt-4 mb-1.5 cursor-pointer border-0 text-xs hover:mt-6 hover:ml-0.5 hover:mb-0 bg-sky-700" value="ENVIAR"></p>			
+                            </form>
+                    </article>
+                </section>
             </div>
         </div>
+        <div id="ceiling" class="w-screen h-screen absolute flex items-center justify-center overflow-hidden absolute">
+            <div id="floor" class="absolute w-screen h-screen origin-top"></div>
+        </div>
+        <div id="glow-animation1" class="flex justify-center items-center absolute w-screen h-screen text-sky-700"><p class="z-20 p-24 text-center">> Your name</p></div>
         <header>
-            <nav id="navbar" class="absolute z-2 navbar flex flex-col text-center text-white bg-stone-700 w-12 h-screen rounded-r-lg">
-
-                <a href="../index.html"><img src="../src/Logotipo Juegos Láser en Negro y Rojo.jpg" class="mt-6 max-width-max"></a>
-                <section id="left-menu" class="flex flex-col gap-8 h-screen">    
+            <nav id="navbar" class="absolute z-40 grid grid-cols-1 text-center text-white bg-stone-700 w-14 hover:w-60 h-screen rounded-r-lg border-solid border-b-4 border-t-4 border-sky-700 outline outline-4 outline-sky-700 drop-shadow-lg hover:drop-shadow-xl duration-500">
+    
+                
+                    <a href="../index.html" id="user-icon" class="absolute z-40 rounded-full border-solid border-sky-700 border-2 margin m-1 mt-6 duration-500 justify-self-center">
+                        <img src="../src/IconUser.svg">
+                    </a>
+                
+    
+                <section id="left-menu" class="z-20 flex justify-center flex-col gap-8 h-screen  duration-500">
                     <a href="../href/SobreMi.html">
-                        <div class="flex transition ease-in-out hover:font-semibold hover:bg-sky-700 h-10 pt-2">
-                            <img src="../src/user.png" class="w-8 h-8 p-1 -mt-1 ml-2 mx-2">
-                            <p class="truncate">Sobre mi</p>
+                        <div class=" flex transition ease-in-out  hover:bg-sky-700 h-12 pt-2">
+                            <img src="../src/user.png" class="w-10 h-10 p-1 -mt-2 mx-2">
+                            <p id="hidden-text" class="h-12 text-center">Sobre mi</p>
                         </div>
                     </a>
                     <a href="../href/Habilidades.html">
-                        <div class="flex transition ease-in-out hover:font-semibold hover:bg-sky-700 h-10 pt-2">
-                            <img src="../src/skills.png" class="w-8 h-8 p-1 -mt-1 ml-2 mx-2">
-                            <p class="truncate">Habilidades</p>
+                        <div class="flex transition ease-in-out  hover:bg-sky-700 h-12 pt-2">
+                            <img src="../src/skills.png" class="w-10 h-10 p-1 -mt-1 ml-2 mx-2">
+                            <p id="hidden-text">Habilidades</p>
                         </div>
                     </a>
                     <a href="../href/Proyectos.html">
-                        <div class="flex transition ease-in-out hover:font-semibold hover:bg-sky-700 h-10 pt-2">
-                            <img src="../src/layers.png" class="w-8 h-8 p-1 -mt-1 ml-2 mx-2">
-                            <p class="truncate">Proyectos</p>
+                        <div class="flex transition ease-in-out  hover:bg-sky-700 h-12 pt-2">
+                            <img src="../src/layers.png" class="w-10 h-10 p-1 -mt-1 ml-2 mx-2">
+                            <p id="hidden-text">Proyectos</p>
                         </div>
                     </a>
                     <a href="../href/Experiencia.html">
-                        <div class="flex transition ease-in-out hover:font-semibold hover:bg-sky-700 h-10 pt-2">
-                            <img src="../src/briefcase.png" class="w-8 h-8 p-1 -mt-1 mx-2">
-                            <p class="truncate">Experiencia</p>
+                        <div class="flex transition ease-in-out  hover:bg-sky-700 h-12 pt-2">
+                            <img src="../src/briefcase.png" class="w-10 h-10 p-1 -mt-2 mx-2">
+                            <p id="hidden-text">Experiencia</p>
                         </div>
                     </a>
-                    
-                        <div class="flex transition ease-in-out hover:font-semibold hover:bg-sky-700 h-10 pt-2">
-                            <img src="../src/chat.png" class="w-8 h-8 p-1 -mt-1 mx-2">
-                            <p class="truncate">Contact Me</p>
+                    <a href="../href/ContactMe.html">
+                        <div class="flex transition ease-in-out  hover:bg-sky-700 h-12 pt-2">
+                            <img src="../src/chat.png" class="w-10 h-10 p-1 -mt-1 mx-2">
+                            <p id="hidden-text">Contact Me</p>
                         </div>
+                    </a>
                 </section>
-                
-                  </div>
             </nav>
         </header>
-        
-    </div>
 </body>
-
 </html>
+

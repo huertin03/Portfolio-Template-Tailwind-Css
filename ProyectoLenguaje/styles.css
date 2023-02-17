@@ -1,6 +1,7 @@
-@font-face { font-family: Mifuente; src: url("src/font/BitBold.ttf"); } 
-#glow-animation, #glow-animation1, #hidden-text {
-    font-family: Mifuente;
+@font-face { font-family: Mifuentetitulo; src: url("src/font/BitBold.ttf"); }
+@font-face { font-family: Mifuente; src: url("src/font/dogicapixel.ttf"); } 
+#glow-animation, #glow-animation1, #hidden-text, #project-panel, #cuatrocientoscuatro {
+    font-family: Mifuentetitulo;
 }
 #hidden-text {
     white-space: nowrap;
@@ -160,4 +161,161 @@
     width: 801px;
     height: 801px;
 
+}
+
+/*HABILIDADES*/
+
+#social a {
+    transform: perspective(1000px) skew(25deg);
+    transition: all 0.5s ease-in-out;
+}
+#social a::before {
+    content: "";
+    left: -20px;
+    transform: skewY(-45deg);
+}
+#social a::after {
+    content: "";
+    bottom: -20px;
+    left: -10px;
+    transform: skewX(-45deg);
+}
+#social a:hover {
+    transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(20px, -20px);
+    box-shadow: -50px 50px 30px rgba(0, 0, 0, 0.5);
+}
+h3 {
+    padding-top: 1rem;
+    transition: all 1s;
+}
+#social a:hover + h3{
+    padding-top: 2.5rem;
+    color: #ffffff;
+
+}
+
+/*PROYECTOS*/
+/*En este caso no he podido identificar a las clases como id's pq entonces no funcionarían las hrefs*/
+.slides {
+    scrollbar-width: none;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+  
+.slides::-webkit-scrollbar {
+    display: none;
+}
+  
+.slides-item {
+    height: 600px;      /*Máximo height son 384 pixeles*/
+    transition: transform .5s;
+}
+  
+.carousel__skip-link:focus {
+    height: 680px;      /*Máximo height son 384 pixeles*/
+}
+#plus:hover > #git-icon {
+    margin-top: 0.625rem;
+    opacity: 1;
+}
+
+#project-panel {
+    margin-top: 69rem;
+}
+#project-panel:hover {
+    margin-top: 50rem;  /*Si lo ponemos sin el hover pq el máximo son 24 rem tmb hay que ponerlo con el hover en css pq sino no lo pilla*/
+}
+
+#project-panel > p::after {
+    content: ' ...';
+}
+
+#project-panel:hover > p::after {
+    content: '';
+}
+span, #not-found, #no-exp {
+    font-family: Mifuente;
+}
+
+#slide-2 {
+    background-image: url(src/raspberry.png);
+}
+
+#slide-3 {
+    background-image: url(src/gamejam.png);
+}
+#slide-4 {
+    background-image: url(src/hollywood.jpg);
+}
+#slide-1 {
+    background-image: url(src/portfolio.jpg);
+}
+
+/*CONTACT ME*/
+      
+@import url(https://fonts.googleapis.com/css?family=Oswald:400,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+#contacto::after {
+content: "";
+z-index: -1;
+}
+#mail {
+border-top: 2em solid transparent;
+border-left: 2.6em solid #202a83;
+}
+#mail:before {
+content: '';
+top: -2.5em;
+left: -2.95em;
+border-top: 1.2em solid #202a83;
+border-left: 1.6em solid transparent;
+border-right: 1.6em solid transparent;
+border-bottom: 1em solid transparent;
+}
+#mail::after {
+content: "";
+border-top: 2em solid transparent;
+border-right: 2.6em solid #202a83;
+left: -2.18em;
+}
+#checkcontacto{
+left: -9999px;
+}
+#contactoform {
+transition: all linear 1s;
+}
+#checkcontacto:checked + #contactoform {
+max-height: 1000px;
+}
+#textarea_superficie textarea {
+border: 1px solid #DADADA;
+box-shadow: 0 0 1px 0 #E4E4E4;
+transition: all 250ms ease;
+color: #2600ff;
+}
+#input_superficie input {
+border: 1px solid #DADADA;
+box-shadow: 0 0 1px 0 #E4E4E4;
+box-sizing: border-box;
+transition: all 250ms ease;
+color: #2600ff;
+}
+#input_superficie input:focus {
+background: rgba(242, 56, 90, 0.05);
+box-shadow: inset 2px 2px 5px 0 #DADADA;
+}
+#input_superficie label {
+color: rgb(0, 0, 0);
+transition: all 250ms ease;
+}
+#input_superficie input:focus + label {
+left: 85%;
+}
+#textarea_superficie textarea:focus {
+background: rgba(242, 56, 90, 0.05);
+box-shadow: inset 2px 2px 5px 0 #DADADA;
+}
+#envio input {
+color: rgb(0, 0, 0);
+transition: all 250ms ease;
 }

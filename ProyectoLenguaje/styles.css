@@ -139,8 +139,8 @@
 .tarjeta2{
     transition: transform 0.8s;
     transform-style: preserve-3d;
-    width: 850px;
-    height: 850px;
+    width: 801px;
+    height: 801px;
 }
 .tarjeta:hover .tarjeta2 {
     transform: rotateY(180deg);
@@ -153,10 +153,11 @@
 }
 .caraB{
     transform: rotateY(180deg);
-    width: 850px;
-    height: 850px;
+    width: 801px;
+    height: 801px;
 }
 .img{
-    width: 850px;
-    height: 850px;
+    width: 801px;
+    height: 801px;
+
 }

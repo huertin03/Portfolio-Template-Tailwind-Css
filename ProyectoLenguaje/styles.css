@@ -19,7 +19,7 @@
         0 0 0.8rem #bc13fe,
         0 0 2.8rem #bc13fe,
         inset 0 0 1.3rem #bc13fe;
-    animation: parpadeo 4s infinite alternate;
+    
 }
 #glow-animation {
     transition: all 0.25s;
@@ -36,7 +36,7 @@
 }
 @keyframes glow {        
     0% {
-        text-shadow: 0 0 20px #0369a1, 0 0 30px #ff4df6, 0 0 50px #ff4de1, 0 0 70px #4dd5ff, 0 0 80px #4ddbff;
+        text-shadow: 0 0 20px #0369a1, 0 0 30px #ff4df6, 0 0 50px #ff4de1, 0 0 70px #4dd5ff;
     }            
     75% {
         text-shadow: 0 1px 0 #0369a1;
@@ -45,20 +45,8 @@
         text-shadow: 0 1px 0 #0369a1;
     }
 }
-@keyframes parpadeo {    
-    18%, 22%, 25%, 53%, 57%, 75%, 99% {     
-        box-shadow:
-        0 0 .2rem #fff,
-        0 0 .2rem #fff,
-        0 0 2rem #bc13fe,
-        0 0 0.8rem #bc13fe,
-        0 0 2.8rem #bc13fe,
-        inset 0 0 1.3rem #bc13fe;
-    }            
-    0%, 20%, 24%, 55% {        
-        box-shadow: none;
-    } 
-}
+
+
 #ceiling {
     transform-style: preserve-3d;   /*No se encuentra en tailwind*/
     perspective: 1000px;            /*No se encuentra en tailwind*/
@@ -241,6 +229,9 @@ span, #not-found, #no-exp {
     font-family: Mifuente;
 }
 
+#slide-1 {
+    background-image: url(src/portfolio.jpg);
+}
 #slide-2 {
     background-image: url(src/raspberry.png);
 }
@@ -251,9 +242,7 @@ span, #not-found, #no-exp {
 #slide-4 {
     background-image: url(src/hollywood.jpg);
 }
-#slide-1 {
-    background-image: url(src/portfolio.jpg);
-}
+
 
 /*CONTACT ME*/
       

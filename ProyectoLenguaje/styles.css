@@ -138,7 +138,7 @@
     perspective: 1000px;
 }
 .tarjeta2{
-    transition: transform 0.8s;
+    transition: transform 0.3s;
     transform-style: preserve-3d;
     width: 801px;
     height: 801px;
@@ -160,7 +160,11 @@
 .img{
     width: 801px;
     height: 801px;
+}
 
+.fotos{
+    width: 180px;
+    height: 180px;
 }
 
 /*HABILIDADES*/
